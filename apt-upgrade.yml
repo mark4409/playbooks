@@ -3,10 +3,12 @@
    hosts: laptops
    tasks:
     - name: Update cache 
+      become: yes
       apt:
         update_cache: yes
          
     - name: Upgrade all packages on servers
+      become: yes
       apt: 
         name: "*"
         state: latest
