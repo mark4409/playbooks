@@ -1,16 +1,13 @@
 ---
  - name: Apt Upgrade
    hosts: laptops
+   become: yes
    tasks:
     - name: Update cache 
-      become: yes
-      become_user: ansible
       apt:
         update_cache: yes
          
     - name: Upgrade all packages on servers
-      become: yes
-      become_user: ansible
       apt: 
         name: "*"
         state: latest
