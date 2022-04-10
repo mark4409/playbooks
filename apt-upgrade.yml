@@ -1,5 +1,6 @@
 ---
  - name: Apt Upgrade
+   hosts: laptops
    tasks:
     - name: Update cache 
       apt:
