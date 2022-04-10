@@ -1,9 +1,11 @@
-tasks:
-  - name: Update cache 
-    apt:
-      update_cache: yes
+---
+ - name: Apt Upgrade
+   tasks:
+    - name: Update cache 
+      apt:
+        update_cache: yes
          
-  - name: Upgrade all packages on servers
-    apt: 
-      name: "*"
-      state: latest
+    - name: Upgrade all packages on servers
+      apt: 
+        name: "*"
+        state: latest
